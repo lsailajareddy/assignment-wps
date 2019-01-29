@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>LEAVE APPLICATION</title>
+<style type="text/css">
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: maroon;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: inline-block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover {
+background-color: gray;
+}
+
+div.page{
+height: 100%;
+width: 100%;
+padding: 20%;
+align-content: center;
+}
+
+div.msg{
+//border: dotted;
+//border-radius: 12px;
+font-family: sans-serif;
+font-style: italic;
+font-weight: 3%;
+height: 50%;
+width: 50%;
+text-align: center;
+float: inherit;
+}
+
+input[type=submit]{
+font-size: 18px;
+background: maroon;
+border: 1px solid ;
+color: white;
+font-weight: bold;
+width: 50%;
+border-radius: 5px;
+padding: 10px 0;
+}
+
+</style>
+</head>
+<body>
+<ul>
+<li><a href="#">LogIn</a></li>
+<li style="float:right"><a class="active"
+href="Register.html">LOGOUT</a></li>
+</ul>
+<br>
+<br>
+<div class="page">
+<div class="msg" align="center">
+<h2>you have submitted your leave
+application</h2>
+<form action="Register.html">
+<input type="submit" value="go back"/>
+</form>
+</div>
+</div>
+</body>
+</html>

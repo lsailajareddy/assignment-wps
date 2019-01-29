@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LEAVE APPLICATION</title>
+<script type="text/javascript">
+function validate(){
+if(document.leaveapplication.name_input.value
+== ""){
+alert("Please enter Name!");
+document.leaveapplication.name_input.focus();
+window.location("leaveapplweb.html");
+return false;
+}
+
+var email =
+document.leaveapplication.email_input.value;
+atpos = email.indexOf("@");
+dotpos = email.lastIndexOf(".");
+if (email == "" || atpos < 1 || ( dotpos
+		- atpos < 2 ))
+
+{
+alert("INVALID!!! enter correct email ID")
+document.leaveapplication.email_input.focus() ;
+window.location("leaveapplweb.html");
+return false;
+}
+
+var
+roll=document.leaveapplication.roll_input.value;
+if( roll == ""){
+alert(" INVALID!! enter correct roll.no")
+document.leaveapplication.roll_input.focus() ;
+window.location("leaveapplweb.html");
+return false;
+}
+
+if(document.leaveapplication.pro_input.value == ""){
+alert(" provide your Proctor Name!");
+document.leaveapplication.pro_input.focus();
+window.location("leaveapplweb.html");
+return false;
+}
+
+if(document.leaveapplication.date_input.value == ""){
+alert("Give the dates you want to take leave on!");
+document.leaveapplication.date_input.focus();
+window.location("leaveapplweb.html");
+return false;
+}
+
+if ( ( leaveapplication.year[0].checked ==false ) && 
+( leaveapplication.year[1].checked ==false ) && 
+(leaveapplication.year[2].checked == false)
+&& (leaveapplication.year[3].checked == false))
+{
+alert ( "Please choose your year!" );
+window.location("leaveapplweb.html");
+return false;
+}
+
+if(document.leaveapplication.stream.value== ""){
+alert("Please enter the branch!!!");
+document.leaveapplication.branch.focus();
+window.location("leaveapplweb.html");
+return false;
+}
+}
+
+</script>
+<style>
+ul {
+list-style-type: none;
+margin: auto;
+padding: 0;
+overflow: hidden;
+background-color: maroon;
+}
+
+li {
+float: center;
+}
+
+li a {
+display: inline-block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: underline;
+}
+
+li a:hover {
+background-color: gray;
+}
+
+div.application{
+font-family: cursive;
+border: double;
+border-color: maroon;
+padding: 4%;
+}
+
+input[type=text],input[type=email],input[type=dat
+e],input[list],textarea{
+width: 150%;
+height: 40px;
+padding: 5px;
+margin-bottom: 25px;
+margin-top: 5px;
+border: 2px solid;
+color: purple;
+font-size: 18px;
+border-radius: 3px;
+}
+
+label{
+color: orange;
+text-shadow: 0 1px 0 #fff;
+font-size: 16px;
+font-weight: bold;
+}
+
+input[type=submit],input[type=reset]{
+font-size: 20px;
+background: maroon;
+border: 1px solid ;
+color: purple;
+font-weight: bold;
+width: 20%;
+border-style: double;
+border-radius: 10px;
+border-color: white;
+padding: 10px 0;
+align-self: center;
+}
+</style>
+</head>
+<body>
+<ul>
+<li><a href="#"><i><b>LEAVE APPLICATION</b></i></a></li>
+<li style="float:right"><a class="active"
+href="Register.html"><b>LOGOUT</b></a></li>
+</ul>
+<br><br>
+
+<div class="application" align="left">
+<form action="leave.html" method="post"
+name="leaveapplication" onsubmit="return
+validate();" >
+<fieldset style="border: solid;">
+<legend style="font-style: italic;text-decoration: underline;font-family: sans-serif;"><b>LEAVE APPLICATION</b></legend>
+<table cellspacing="20" cellpadding="10">
+
+<tr>
+<td label for="Name"><i> Name</i> </td>
+<td><input type="text" name="name_input"></td>
+</tr>
+
+<tr>
+<td label for="Mail"> Gmail </td>
+<td><input type="email" name="email_input"></td>
+</tr>
+
+<tr>
+<td label for=" year"> Year: </td>
+<td>
+<input type="radio" name="year" value="1">1<input type="radio" name="year" value="2">2
+<input type="radio" name="year" value="3">3
+<input type="radio" name="year" value="4">4
+</td>
+</tr>
+
+<td label for="department"> Department: </td>
+<td><input type=" text" list="department">
+<datalist id="department">
+<option value="CSE">CSE</option>
+<option value="IT">IT</option>
+<option value="MECH">MECH</option>
+<option value="ECE">ECE</option>
+<option value="EEE">EEE</option>
+<option value="CIVIL">CIVIL</option>
+</datalist>
+</select></td>
+</tr>
+
+<tr>
+<td label for="rollno"> Roll.no </td>
+<td><input type="text" name="roll_input"></td>
+</tr>
+
+<tr>
+<td label for="proctor"> Proctor </td>
+<td><input type="text" name="pro_input"></td>
+</tr>a
+</body>
+</html>

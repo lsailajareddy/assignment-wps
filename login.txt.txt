@@ -1,0 +1,150 @@
+
+}
+
+else{
+alert("INVALID!!
+Enter valid login id!");
+chance--;
+window.location("Register.html");
+return false;
+}
+return true;
+}
+
+function validateStudent(){
+if(document.student.id.value=="1602-16-733-101"
+&& document.student.pass.value=="curney"){
+window.location("leaveapplweb.html.html");
+return true;
+}
+
+else{
+alert("INVALID!!
+enter valid login id!");
+chance--;
+window.location("Register.html");
+return false;
+}
+return true;
+}
+
+</script>
+<style>
+ul {
+
+list-style-type: none;
+padding: 0;
+margin: 0;
+overflow: hidden;
+background-color: maroon;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: inline-block;
+color: white;
+padding: 14px 16px;
+text-align: center;
+}
+
+li a:hover {
+background-color: gray;
+}
+
+div.page{
+padding: 10%;
+}
+
+div.faculty{
+position: relative;
+float: right;
+padding: 8%;
+border: double;
+border-radius: 20px;
+border-color: gray;
+}
+
+div.student{
+position: relative;
+float: left;
+padding: 8%;
+border: double;
+border-radius: 20px;
+border-color: gray;
+}
+
+input[type=submit]{
+font-size: 25px;
+font-weight: bold;
+padding: 10px 0;
+background: maroon;
+border: double; ;
+border-color: black;
+color: white;
+border-radius: 5px;
+width: 100%;
+}
+
+label{
+color: black;
+text-shadow: 0 1px 0 #fff;
+font-size: 20px;
+font-weight: normal;
+}
+
+input[type=text],input[type=password]{
+height: 30px;
+width: 100%;
+padding: 8px;
+margin-bottom: 25px;
+margin-top: 5px;
+border: 2px solid gray;
+color: purple;
+border-radius: 9px;
+font-size: 18px;
+}
+
+</style>
+</head>
+<body>
+<ul>
+<li><a href="#">LogIn</a></li>
+</ul>
+<br>
+<br>
+
+<div class="page">
+<div class="faculty">
+<h2>STAFF</h2>
+<form action="leave.html" method="post"
+name="faculty" onsubmit="return validateFaculty();">
+
+<label><i>LoginID:</i></label><br>
+
+<input type="text" name="id"/><br><br>
+
+<label><i>Password:</i></label><br>
+
+<input type="password" name="pass"/><br><br>
+
+<input type="submit" value="Login"/>
+
+</form>
+</div>
+<div class="student">
+<h2>STUDENT</h2>
+<form action="leaveapplweb.html" method="post"
+name="student" onsubmit="return validateStudent();">
+<label><i>LoginID:</i></label><br>
+<input type="text" name="id"/><br><br>
+<label><i>Password:</i></label><br>
+<input type="password" name="pass"/><br><br>
+<input type="submit" value="Login" />
+</form>
+</div>
+</div>
+</body>
+</html>
